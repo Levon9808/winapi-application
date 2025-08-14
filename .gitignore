@@ -1,0 +1,38 @@
+# Сборочные папки CMake
+build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cbp
+
+# Бинарники и объектные файлы
+*.exe
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.swp
+
+# Qt Creator
+*.pro.user*
+*.user
+*.user.* 
+*.autosave
+*.qbs.user*
+
+# IDE и редакторы
+*.idea/
+*.vscode/
+*.suo
+*.ncb
+*.opensdf
+*.sdf
+
+# MacOS системные файлы
+.DS_Store
