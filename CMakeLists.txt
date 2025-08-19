@@ -5,10 +5,15 @@ project(Stroyka LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(Stroyka main.cpp)
-
-include(GNUInstallDirs)
-install(TARGETS Stroyka
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+add_executable(Stroyka WIN32
+    main.cpp
+    basewindow.cpp
+    basewindow.h
 )
+
+if (MINGW)
+    target_link_options(Stroyka PRIVATE -municode)
+endif()
+
+target_compile_definitions(Stroyka PRIVATE UNICODE _UNICODE)
+
